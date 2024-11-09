@@ -1,0 +1,657 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Oleo+Script+Swash+Caps:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Oleo+Script+Swash+Caps:wght@400;700&family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Great+Vibes&family=Oleo+Script+Swash+Caps:wght@400;700&family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+}
+:root{
+    --pink:#e79ea7;
+    --green:#d7fecf;
+    --blue:#90c6b9;
+}
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+.container{
+    width: 100%;
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.video{
+    width:100%;
+    height:100%;
+    position: absolute;
+    bottom: 0;
+    z-index: -100;
+    right: 0;
+}
+.header{
+    width: 100%;
+    height: 20vh;
+    padding: 1rem;
+    background-color: rgb(0, 0, 0);
+    color: white;
+}   
+  
+ 
+        .header{
+            width: 100%;
+            height: auto;
+            padding: 1rem;
+            z-index: 1000000;
+            background-color: rgb(0, 0, 0)
+            color: white;
+            display: flex;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            justify-content: space-between;
+    }
+    .header h2{
+        font-family: "Great Vibes", cursive;
+        color: white;
+        font-size: 3rem;
+        background-color: black;
+        background: #E79EA7;
+background: radial-gradient(circle farthest-corner at center center, #E79EA7 0%, #90C6B9 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+
+
+    } 
+    span{
+        background: #E79EA7;
+background: radial-gradient(circle farthest-corner at center center, #E79EA7 50%, #90C6B9 50%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+font-weight: bolder;
+
+    }
+    .header a{
+        color: white;
+        font-size: 1.8rem;
+        padding-left: 2rem;
+        font-family: "Oleo Script Swash Caps", cursive;
+        font-weight: lighter;
+    }
+    .logo{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+    .maintext{
+        width: 95%;
+        height: 99vh;
+        background:transparent;
+        position: absolute;
+        top: 8%;
+        right: 0;
+        margin: 1rem auto;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    .leftside{
+        width:35% ;
+        height: 100%;
+        background-color: transparent;
+        display: flex;
+        font-family: "Pacifico", cursive;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-around;
+        color: white;
+        padding: 1rem;
+
+        
+    }
+    .first{
+        width: 80%;
+        background-color: transparent;
+        color: white;
+        height: 30%;
+        font-size: 3.5rem;
+        padding: 1rem;
+        text-align: center;
+    }
+    .rightside{
+        width: 65%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background:transparent ;
+        overflow: hidden;
+    }
+    .rightside img{
+        width: 85%;
+        height: 82%;
+    }
+.second{
+    width: 80%;
+    height: 10%;
+    background:white;
+    color: black;
+    text-align: center;
+    border-radius: 2rem;
+    font-family: "Cormorant", serif;                   
+   display:flex;
+   align-items: center;
+   justify-content: center;
+   font-size: 1.3rem;
+}
+button{
+    width: 60%;
+    height: 4rem;
+    border-radius: 2rem;
+    background: black;
+    color: var(--pink);
+    border: 2px solid white;
+    font-family: "pacifico",cursive;
+    font-size: 2rem;
+    transition: 1s;
+    
+}
+button:hover{
+    word-spacing: 0.5rem;
+    font-size: 2.2rem;
+    cursor: pointer;
+    padding-left: 1rem;
+}
+.container2{
+    width: 100%;
+    height: auto;
+    background:black;
+}
+.heading{
+    color:white;
+    font-size: 4rem;
+    padding-top: 4rem;
+    text-align: center;
+    font-family: "pacifico",cursive;
+}
+.underline{
+    background: white;
+    height:0.5rem ;
+    width: 35%;
+    position:relative;
+    top: 10%;
+    border-radius: 2rem;
+    left: 33%;
+}
+.shirts{
+    width: 100%;
+    height: auto;
+    background-color:transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.products{
+    border-radius: 2rem;
+    transition: 0.5s;
+    width: 30rem;
+    height: 48rem;
+    background-color:transparent ;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    margin-top: 4rem;
+    margin: 8rem;
+    
+}
+.top{
+    width: 100%;
+    height: 60%;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+.top img{
+    width: 100%;
+    height: 100%;
+}
+    .bottom{
+        width: 100%;
+        height: 45%;
+        background-color:transparent;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 1rem;
+    }
+    .bottom h2{
+        font-size: 3rem;
+        color: white;
+        text-align: center;
+
+    }
+    .bottom h3{
+        font-size: 2.5rem;
+        color: var(--green);
+    }
+        .products button{
+            width: 70%;
+          margin-bottom: 1rem;
+            font-family: "Oleo Script Swash Caps", cursive;
+            font-size: 2.8rem;
+            height: 4.5rem;
+            word-spacing: 0.5rem;
+            background: black;
+            color: var(--pink);
+        }
+        .products:hover{
+            cursor: pointer;
+            background: black;
+            width: 33rem;
+            height: 50rem;
+            border: 2px solid white;
+        }
+        .container3{
+            width: 100%;
+            height: auto;
+            background:white;
+
+        }
+        .container3 .heading{
+            color: black;
+        }
+        .container3 .underline{
+            background: black;
+            align-items: center;
+        }
+        .container3 .bottom h2{
+            background:black;
+
+        }
+        .container3 .bottom h3{
+            color: rgb(0, 218,0);
+        }
+    .container3.products:hover{
+        cursor: pointer;
+        background: white;
+        border: 2px solid black;
+
+
+    }
+    .container4{
+         background:black; 
+        color: white;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: auto;
+
+    }
+    .offers2{
+        background:white;
+        width: 100%;
+        margin-top: 3rem;
+        height: 90rem;
+         display: flex;
+         align-items: center;
+         justify-content: space-evenly;
+         flex-wrap: wrap;
+    }
+    
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 100,
+  'GRAD' 200,
+  'opsz' 24
+}
+
+.parts{
+    margin: 1rem;
+    width: 50rem;
+    height: 40rem;
+    border: 2px solid black;
+    background-color:white ;
+    color: black;
+    border-radius:2rem ;
+    transition: 1s;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+.parts p{
+font-size: 1.8rem;
+font-family: "Corsorant SC*, serif;
+font-weight:bolder;
+}
+.parts h1{
+    font-size: 4rem;
+    font-family: "Oleo Script Swash Caps”, cursive; 
+}
+.parts img{
+    width: 60%;
+    height: 60%;
+
+}
+#black{
+    background:black;
+    color: white;
+    border: 2px solid white;
+    
+
+}
+.parts button{
+    font-size:3rem ;
+    font-family: "Cookie", cursive;
+    width: 50% ;
+    word-spacing: 1.2rem;
+}
+.parts:hover{
+    width: 53rem;
+    height: 43rem;
+    cursor: pointer;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+/* Basic styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+/* Footer styling */
+.footer {
+    background-color: #111;
+    color: #f0f0f0;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+    margin: 20px;
+}
+
+.footer-section h2, .footer-section h3 {
+    color: #e3bcb8;
+    margin-bottom: 10px;
+}
+
+.footer-section p {
+    color: #aaa;
+    line-height: 1.6;
+}
+
+.social-icons a {
+    color: #f0f0f0;
+    margin: 0 10px;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #e3bcb8;
+}
+
+/* Newsletter form */
+.footer-section form {
+    margin-top: 10px;
+}
+
+.footer-section form input {
+    padding: 10px;
+    width: 80%;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.footer-section form button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #e3bcb8;
+    color: #111;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.footer-section form button:hover {
+    background-color: #d19a96;
+}
+
+/* Footer bottom */
+.footer-bottom {
+    margin-top: 20px;
+    border-top: 1px solid #444;
+    padding-top: 10px;
+}
+
+.footer-bottom span {
+    color: #e3bcb8;
+}
+
+.searchbar{
+    width: 30rem;
+    height: 5rem;
+    background:black;
+    color: var(--pink);
+    border-radius: 2rem;
+    display: flex;
+    transition: 1s;
+    align-items: center;
+    justify-content: space-evenly;
+    position: fixed;
+    border: 2px solid white;
+    padding: 1.3rem;
+    top: 24%;
+    right:-95%;
+    z-index: 10000;
+} 
+.searchbar.active{    
+    right:5% ;
+}
+
+
+.searchbar h1{
+    font-size: 3rem;
+    padding:2.5rem ;
+}
+.favorite{
+    width: 25rem;
+    height: 15rem;
+    background: black;
+    color: var(--pink);
+    border: 2px solid white;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    transition: 1s;
+    top:24%;
+    right:-95%;
+    line-height: 4rem;
+    border-radius: 2rem;
+    padding: 2rem;
+    text-align: center;
+    z-index: 100000;
+    
+}
+.favorite.active{    
+    right:5% ;
+}
+.cheakout{
+    width:40rem;
+    height: 40rem;
+    background:black ;
+    border: 2px solid white;
+    border-radius: 2rem;
+    position: fixed;
+    transition: 1s;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    top: 24%;
+    right:-95%;
+    z-index: 10000;
+}
+.cheakbox{
+    width: 90%;
+    height: 20%;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 2rem;
+    border: 2px solid white;
+    color: white;
+    padding: 1rem;
+
+    
+}
+.cheakbox h2{
+    text-align: center;
+    width: 48%;
+    font-size: 2rem;
+    padding:1rem ;
+
+}
+.cheakbox img{
+    width: 15%;
+    height: 100%;
+}
+.cheakbox p{ 
+    font-size: 1.8rem;
+}
+.cheakout.active{    
+    right:5% ;
+}   
+
+
+.login{
+    width: 30rem;
+    height: 30rem;
+    background-color: black;
+    color: white;
+    border-radius: 2rem;
+    border: 2px solid white;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    transition: 1s;
+    top:24%;
+    right:-95%;
+    z-index: 10000;
+    
+}
+#username{
+    width: 90%;
+    height: 20%;
+    background: black;
+    color: white;
+    padding: 2rem;
+    border: 2px solid white;
+    border-radius: 2rem;
+    font-size: 2rem;
+    
+}
+#password{
+    
+        width: 90%;
+        height: 20%;
+        background: black;
+        color: white;
+        padding: 2rem;
+        border: 2px solid white;
+        border-radius: 2rem;
+        font-size: 2rem;
+        
+    }
+.login a{
+    font-size: 1.5rem;
+    color: whitesmoke;
+    word-spacing: 0.5rem;
+
+}
+.login.active{
+    right:5% ;
+}
+::-webkit-scrollbar{
+    width: 0px;
+}
+    @media (min-aspect-ratio: 16/9){
+        .video{
+            width: 100%;  
+            height:auto;
+        }}
+    @media (max-aspect-ratio: 16/9){ 
+       .video{
+        width:auto;
+        height: 100%;
+        background:black;
+        
+    }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

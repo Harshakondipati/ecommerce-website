@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login, Sign Up, and Forgot Password</title>
+    <style>
+        /* Styling for the form */
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #1e1e1e;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 300px;
+            padding: 20px;
+            background-color: black;
+            border-radius: 10px;
+            color: white;
+            text-align: center;
+        }
+        .container input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #333;
+            color: white;
+        }
+        .container input::placeholder {
+            color: #888;
+        }
+        .container a {
+            color: #ccc;
+            text-decoration: none;
+            display: block;
+            margin-top: 10px;
+        }
+        .container a:hover {
+            color: pink;
+        }
+        .container button {
+            padding: 10px 20px;
+            background-color: pink;
+            color: black;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .container button:hover {
+            background-color: #ff99cc;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="loginContainer">
+        <!-- Login Form -->
+        <div id="loginForm">
+            <h2>Login</h2>
+            <input type="text" id="loginUsername" placeholder="Username">
+            <input type="password" id="loginPassword" placeholder="Password">
+            <button onclick="login()">Login</button>
+            <a href="#" onclick="showSignUp()">Create Account</a>
+            <a href="#" onclick="showForgotPassword()">Forgot Password</a>
+        </div>
+
+        <!-- Sign Up Form -->
+        <div id="signUpForm" class="hidden">
+            <h2>Sign Up</h2>
+            <input type="text" id="signUpUsername" placeholder="New Username">
+            <input type="password" id="signUpPassword" placeholder="New Password">
+            <button onclick="signUp()">Create Account</button>
+            <a href="#" onclick="showLogin()">Back to Login</a>
+        </div>
+
+        <!-- Forgot Password Form -->
+        <div id="forgotPasswordForm" class="hidden">
+            <h2>Forgot Password</h2>
+            <input type="text" id="forgotUsername" placeholder="Enter Your Username">
+            <button onclick="forgotPassword()">Retrieve Password</button>
+            <a href="#" onclick="showLogin()">Back to Login</a>
+        </div>
+    </div>
+
+    <script>
+        // Function to show login form
+        function showLogin() {
+            document.getElementById('loginForm').classList.remove('hidden');
+            document.getElementById('signUpForm').classList.add('hidden');
+            document.getElementById('forgotPasswordForm').classList.add('hidden');
+        }
+
+        // Function to show sign-up form
+        function showSignUp() {
+            document.getElementById('loginForm').classList.add('hidden');
+            document.getElementById('signUpForm').classList.remove('hidden');
+            document.getElementById('forgotPasswordForm').classList.add('hidden');
+        }
+
+        // Function to show forgot password form
+        function showForgotPassword() {
+            document.getElementById('loginForm').classList.add('hidden');
+            document.getElementById('signUpForm').classList.add('hidden');
+            document.getElementById('forgotPasswordForm').classList.remove('hidden');
+        }
+
+        // Sign-up function to save user credentials
+        function signUp() {
+            const username = document.getElementById('signUpUsername').value;
+            const password = document.getElementById('signUpPassword').value;
+
+            if (username && password) {
+                // Save user data to localStorage in JSON format
+                const user = { username, password };
+                localStorage.setItem('user', JSON.stringify(user));
+                alert('Account created successfully!');
+                showLogin(); // Go back to login form
+            } else {
+                alert('Please fill in both fields.');
+            }
+        }
+
+        // Login function to validate user credentials
+        function login() {
+            const enteredUsername = document.getElementById('loginUsername').value;
+            const enteredPassword = document.getElementById('loginPassword').value;
+
+            // Retrieve the stored user data from localStorage
+            const storedUser = JSON.parse(localStorage.getItem('user'));
+
+            if (storedUser) {
+                if (enteredUsername === storedUser.username && enteredPassword === storedUser.password) {
+                    alert('Login successful!');
+                } else {
+                    alert('Invalid username or password.');
+                }
+            } else {
+                alert('No account found. Please create an account.');
+            }
+        }
+
+        // Forgot password function to retrieve stored password
+        function forgotPassword() {
+            const enteredUsername = document.getElementById('forgotUsername').value;
+            const storedUser = JSON.parse(localStorage.getItem('user'));
+
+            if (storedUser && enteredUsername === storedUser.username) {
+                alert(`Your password is: ${storedUser.password}`);
+            } else {
+                alert('Username not found.');
+            }
+        }
+    </script>
+</body>
+</html>
